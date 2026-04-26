@@ -48,7 +48,7 @@ main.py
 
 #  Component details
 
-## `vehicle.py`
+# `vehicle.py`
 
 Represents a moving entity in the network.
 
