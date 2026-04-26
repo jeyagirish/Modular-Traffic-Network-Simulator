@@ -73,7 +73,7 @@ Directional connection between two nodes.
 * Each vehicle gets an `arrival_step`
 * `step()` moves vehicles to an **exit queue**
 
-📌 **Queuing happens here**:
+**Queuing happens here**:
 Vehicles wait at the end of roads if the junction is congested.
 
 ---
