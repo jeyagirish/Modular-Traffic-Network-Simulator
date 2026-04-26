@@ -27,8 +27,7 @@ This pipeline ensures:
 
 ---
 
-# Project Structure
-
+Project Structure
 traffic_sim/
     road.py
     junction.py
@@ -39,7 +38,7 @@ traffic_sim/
     engine.py
     stats.py
     visualizer.py
-    
+
 main.py
 
 ---
