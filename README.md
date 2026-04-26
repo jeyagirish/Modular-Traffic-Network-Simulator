@@ -1,24 +1,22 @@
-# 🚦 Traffic Simulator (Modular Road Network Simulation)
+# Traffic Simulator (Modular Road Network Simulation)
 
 A modular, extensible traffic simulation framework for modeling vehicle flow across a network of directional roads and junctions. Designed for easy adaptation to different network topologies, with visualization and performance statistics.
 
 ---
 
-# 📌 Overview
+# Overview
 
 This simulator models a road network using a **discrete time-step engine**, where vehicles move through roads and junctions while respecting capacity, routing, and scheduling constraints.
 
-It is built with a **clean modular architecture**, so that on the final day you only modify `main.py` to define a new network.
+It is built with a clean modular architecture, so that on the final day you only modify `main.py` to define a new network.
 
 ---
 
-# 🧱 Architecture
+# Architecture
 
 At each simulation step:
 
-```
 Roads → Junctions → Sinks → Sources
-```
 
 This pipeline ensures:
 
@@ -29,9 +27,8 @@ This pipeline ensures:
 
 ---
 
-# 📁 Project Structure
+# Project Structure
 
-```
 traffic_sim/
     road.py
     junction.py
@@ -42,15 +39,14 @@ traffic_sim/
     engine.py
     stats.py
     visualizer.py
-
+    
 main.py
-```
 
 ---
 
-# 📦 Component Breakdown
+#  Component details
 
-## 🚗 `vehicle.py` — Vehicle
+## `vehicle.py`
 
 Represents a moving entity in the network.
 
@@ -67,7 +63,7 @@ Represents a moving entity in the network.
 
 ---
 
-## 🛣️ `road.py` — Road
+##  `road.py`
 
 Directional connection between two nodes.
 
@@ -80,7 +76,7 @@ Vehicles wait at the end of roads if the junction is congested.
 
 ---
 
-## 🚥 `junction.py` — Junction
+##  `junction.py` 
 
 Handles routing and scheduling.
 
@@ -97,7 +93,7 @@ Handles routing and scheduling.
 
 ---
 
-## 🏁 `sink.py` — Sink
+##  `sink.py` 
 
 Destination node where vehicles exit.
 
@@ -106,7 +102,7 @@ Destination node where vehicles exit.
 
 ---
 
-## 🚘 `source.py` — Traffic Source
+##  `source.py`
 
 Generates vehicles.
 
@@ -122,7 +118,7 @@ Each vehicle:
 
 ---
 
-## 🧭 `router.py` — Router
+##  `router.py` 
 
 Computes shortest paths.
 
@@ -132,7 +128,7 @@ Computes shortest paths.
 
 ---
 
-## ⚙️ `engine.py` — Simulation Engine
+##  `engine.py` 
 
 Core orchestrator.
 
@@ -143,7 +139,7 @@ Core orchestrator.
 
 ---
 
-## 📊 `stats.py` — Statistics
+##  `stats.py`
 
 Tracks and computes:
 
@@ -155,7 +151,7 @@ Tracks and computes:
 
 ---
 
-## 🎥 `visualizer.py` — Visualization
+##  `visualizer.py`
 
 Outputs:
 
@@ -171,7 +167,7 @@ Features:
 
 ---
 
-## 🧪 `main.py` — Entry Point (IMPORTANT)
+##  `main.py` 
 
 This is the **only file you modify**.
 
@@ -185,7 +181,7 @@ Defines:
 
 ---
 
-# ▶️ How to Run
+#  How to Run
 
 ## 1. Install dependencies
 
@@ -201,107 +197,33 @@ python main.py
 
 ---
 
-# 🧪 Testing Strategy
 
-## ✅ Basic Test
 
-* Simple linear network (A → B → C)
-* Verify vehicles reach destination
-
-## ✅ Capacity Test
-
-* Reduce road capacity
-* Observe queue buildup
-
-## ✅ Congestion Test
-
-* Increase source rate
-* Observe delays and blocking
-
-## ✅ Multi-Path Routing
-
-* Add alternate routes
-* Verify routing works
-
-## ✅ Multi-Source Test
-
-* Add multiple sources/destinations
-* Observe mixed traffic
-
----
-
-# 🧠 Key Design Decisions
-
-| Problem                      | Solution                               |
-| ---------------------------- | -------------------------------------- |
-| Where does queuing happen?   | On roads (exit queue)                  |
-| How are junctions scheduled? | Configurable policies (RR, FIFO, etc.) |
-| How is routing done?         | Dijkstra shortest path                 |
-| Simulation type              | Time-step based                        |
-| Vehicle movement             | Pipeline (road → junction → sink)      |
-
----
-
-# 📊 Example Output
-
-* Animated vehicle movement
-* Network diagram
-* Stats:
-
-  * Vehicles completed
-  * Average travel time
-  * Peak congestion
-
----
-
-# 🚀 Extensibility
-
-You can easily extend this to include:
-
-* 🚦 Traffic lights
-* 🧠 Congestion-aware routing
-* 🚗 Multi-lane roads
-* 📈 Real-time analytics
-* 🎬 MP4 video export
-
----
-
-# 🎯 Final Day Usage
+# Usage
 
 When given a new topology:
 
-✔ Modify only `main.py`
-✔ Define:
+Modify only `main.py`
+Define:
 
 * Nodes (junctions/sinks)
 * Roads
 * Sources
 
-✔ Run:
+Run:
 
 ```
 python main.py
 ```
 
-✔ Show:
+Show:
 
 * Animation
 * Stats output
 
 ---
 
-# 💡 Demo Tips
-
-While presenting:
-
-* Explain pipeline flow
-* Highlight routing logic
-* Show congestion effects
-* Discuss scalability
-
----
-
-# ✅ Summary
+# Summary
 
 This simulator provides:
 
