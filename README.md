@@ -48,7 +48,7 @@ main.py
 
 #  Component details
 
-# `vehicle.py`
+`vehicle.py`
 
 Represents a moving entity in the network.
 
@@ -65,7 +65,7 @@ Represents a moving entity in the network.
 
 ---
 
-##  `road.py`
+`road.py`
 
 Directional connection between two nodes.
 
@@ -78,7 +78,7 @@ Vehicles wait at the end of roads if the junction is congested.
 
 ---
 
-##  `junction.py` 
+`junction.py` 
 
 Handles routing and scheduling.
 
@@ -95,7 +95,7 @@ Handles routing and scheduling.
 
 ---
 
-##  `sink.py` 
+`sink.py` 
 
 Destination node where vehicles exit.
 
@@ -104,7 +104,7 @@ Destination node where vehicles exit.
 
 ---
 
-##  `source.py`
+`source.py`
 
 Generates vehicles.
 
@@ -120,7 +120,7 @@ Each vehicle:
 
 ---
 
-##  `router.py` 
+`router.py` 
 
 Computes shortest paths.
 
@@ -130,7 +130,7 @@ Computes shortest paths.
 
 ---
 
-##  `engine.py` 
+`engine.py` 
 
 Core orchestrator.
 
@@ -141,7 +141,7 @@ Core orchestrator.
 
 ---
 
-##  `stats.py`
+`stats.py`
 
 Tracks and computes:
 
@@ -153,7 +153,7 @@ Tracks and computes:
 
 ---
 
-##  `visualizer.py`
+`visualizer.py`
 
 Outputs:
 
@@ -169,7 +169,7 @@ Features:
 
 ---
 
-##  `main.py` 
+`main.py` 
 
 This is the **only file you modify**.
 
